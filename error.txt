@@ -1,0 +1,13 @@
+I got this error after running the latest code:
+Traceback (most recent call last):
+  File "chatbot.py", line 69, in <module>
+    train()
+  File "chatbot.py", line 58, in train   
+    genomes = list(population.run(evaluate_genome, 10))
+  File "E:\ProgramData\miniconda3\lib\site-packages\neat\population.py", line 89, in run
+    fitness_function(list(iteritems(self.population)), self.config)
+  File "chatbot.py", line 23, in evaluate_genome
+    net = neat.nn.FeedForwardNetwork.create(genome, config)
+  File "E:\ProgramData\miniconda3\lib\site-packages\neat\nn\feed_forward.py", line 33, in create
+    connections = [cg.key for cg in itervalues(genome.connections) if cg.enabled]
+AttributeError: 'list' object has no attribute 'connections'
